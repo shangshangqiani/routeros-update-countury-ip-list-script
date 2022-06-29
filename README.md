@@ -10,7 +10,8 @@ routeros更新国家ip列表脚本
 :if [/file find name=CN] do={:log info ("The file download successful")} else={/tool fetch url=http://www.iwik.org/ipcountry/mikrotik/CN; :log info ("The file download successful")}
 ```
 ### (与下面的Force_CNlist对应否则脚本失效)
-未被阻断的一些域名，例如:[speedtest.net](www.speedtest.net)
+未被阻断的一些域名，例如:[speedtest.net](www.speedtest.net)  
+按需求来，用不上就注释掉~
 ```yaml
 /ip firewall address-list
 disable [find address=example.com]
@@ -45,3 +46,4 @@ disable [find address=example.com]
 /ip firewall address-list
 add address=example.com list=CN
 ```
+## enjoy~
